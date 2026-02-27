@@ -1,0 +1,106 @@
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.no-curso {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.course {
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e4e8f0;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 3px 0;
+    font-size: 13px;
+    color: #555;
+  }
+}
+
+.status {
+  display: inline-block;
+  max-width: fit-content;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 8px 0;
+
+  &.active {
+    background: #d4edda;
+    color: #155724;
+  }
+
+  &.inactive {
+    background: #f8d7da;
+    color: #721c24;
+  }
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    flex: 1;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.2s;
+  }
+
+  button:first-child {
+    background: #52514f;
+    color: white;
+    margin-right: 5px;
+
+    &:hover {
+      background: #7d7c7b;
+    }
+  }
+
+  .delete {
+    background: #dc3545;
+    color: white;
+
+    &:hover {
+      background: #b02a37;
+    }
+  }
+}

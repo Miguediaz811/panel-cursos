@@ -1,32 +1,21 @@
 <div class="card">
   <h2>Cursos registrados</h2>
 
-  <p *ngIf="courseService.getCourses().length === 0">
-    No hay cursos registrados.
-  </p>
+  <p class="no-curso"*ngIf="courseService.getCourses().length === 0">No hay cursos registrados</p>
 
+  <div class="courses-grid">
   <div *ngFor="let course of courseService.getCourses()" class="course">
 
     <h3>{{ course.name }}</h3>
     <p>Duración: {{ course.duration }} horas</p>
     <p>Nivel: {{ course.level }}</p>
 
-    <span 
-      class="status"
-      [class.active]="course.active"
-      [class.inactive]="!course.active">
-      {{ course.active ? 'Activo' : 'Inactivo' }}
-    </span>
+    <span class="status"[class.active]="course.active"[class.inactive]="!course.active">{{ course.active ? 'Activo' : 'Inactivo' }}</span>
 
     <div class="actions">
-      <button (click)="courseService.toggleStatus(course.id)">
-        {{ course.active ? 'Desactivar' : 'Activar' }}
-      </button>
+      <button (click)="courseService.toggleStatus(course.id)">{{ course.active ? 'Desactivar' : 'Activar' }}</button>
 
-      <button class="delete"
-              (click)="courseService.deleteCourse(course.id)">
-        Eliminar
-      </button>
+      <button class="delete"(click)="courseService.deleteCourse(course.id)">Eliminar</button>
     </div>
 
   </div>

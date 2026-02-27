@@ -1,0 +1,45 @@
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+  h2 {
+    margin-bottom: 18px;
+    color: #333;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: #2f6fcd;
+      box-shadow: 0 0 0 2px rgba(47,111,205,0.15);
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #2f6fcd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #1f55a3;
+    }
+  }
+}
