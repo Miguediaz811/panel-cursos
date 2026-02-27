@@ -12,6 +12,7 @@ export class CourseFormComponent {
   name = '';
   duration = '';
   level: 'Básico' | 'Intermedio' | 'Avanzado' = 'Básico';
+  active = true;
 
   constructor(private courseService: CourseService) {}
 
@@ -23,7 +24,7 @@ export class CourseFormComponent {
       name: this.name,
       duration: this.duration,
       level: this.level,
-      active: true
+      active: this.active
     };
 
     this.courseService.addCourse(newCourse);
@@ -31,5 +32,6 @@ export class CourseFormComponent {
     this.name = '';
     this.duration = '';
     this.level = 'Básico';
+    this.active = true;
   }
 }

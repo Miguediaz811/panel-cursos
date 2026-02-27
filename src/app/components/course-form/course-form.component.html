@@ -11,5 +11,10 @@
     <option value="Avanzado">Avanzado</option>
   </select>
 
+  <select [(ngModel)]="active">
+    <option [ngValue]="true">Activo</option>
+    <option [ngValue]="false">Inactivo</option>
+  </select>
+
   <button (click)="addCourse()">Agregar curso</button>
 </div>
